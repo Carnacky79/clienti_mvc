@@ -1,0 +1,35 @@
+//
+// Root
+//
+
+// Light mode
+@include color-mode(light) {
+    // Page bg
+    --#{$prefix}page-bg: #{$page-bg};
+
+    // App blank bg color
+    --#{$prefix}app-blank-bg: #{$app-blank-bg-color};
+
+    // Header
+    --#{$prefix}header-box-shadow: #{get($header-config, box-shadow)};
+
+    // Aside
+    --#{$prefix}aside-bg-color: #{get($aside-config, bg-color)};
+    --#{$prefix}aside-menu-link-bg-color-active: #{get($aside-config, menu-link-bg-color-active)};
+}
+
+// Dark mode
+@include color-mode(dark) {
+    // Page bg
+    --#{$prefix}page-bg: #{$page-bg-dark};
+
+    // App blank bg color
+    --#{$prefix}app-blank-bg: #{$app-blank-bg-color-dark};
+
+    // Header
+    --#{$prefix}header-box-shadow: #{get($header-config, box-shadow-dark)};
+
+    // Aside
+    --#{$prefix}aside-bg-color: #{get($aside-config, bg-color-dark)};
+    --#{$prefix}aside-menu-link-bg-color-active: #{get($aside-config, menu-link-bg-color-active-dark)};
+}
